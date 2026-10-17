@@ -1,5 +1,7 @@
 *This is a submission for the [Hacktoberfest Open-Source AI Challenge Week 2: Side Hustle](https://dev.to/challenges/hacktoberfest-week2-2026-10-12)*
 
+<!-- In addition to images for the post's content, you can also drag and drop a cover image. -->
+
 ---
 
 # BatchTrace Agent — AI-Powered Food Traceability & Incident Intelligence Platform
