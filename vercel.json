@@ -20,12 +20,6 @@
   },
   "rewrites": [
     {
-      "source": "/pyapi/(.*)",
-      "destination": {
-        "service": "backend"
-      }
-    },
-    {
       "source": "/(.*)",
       "destination": {
         "service": "web"
