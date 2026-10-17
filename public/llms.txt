@@ -1,0 +1,37 @@
+# BatchTrace Agent — Product Information for LLMs & AI Agents
+
+> Tagline: Every batch has a story. Find it instantly.
+> Objective: Grounded food traceability, batch investigation, and incident intelligence.
+
+## System Overview
+BatchTrace Agent connects disconnected food manufacturing spreadsheets, PDF invoices, dock receiving logs, batch production sheets, and customer dispatch records into a deterministic PostgreSQL traceability graph.
+
+## Core Capabilities
+- Forward Tracing: Supplier -> Ingredient Lot -> Production Batches -> Finished Goods Lots -> Customer Orders.
+- Backward Tracing: Customer Order / Finished Lot -> Originating Production Batch -> Consumed Ingredient Lots -> Suppliers.
+- Quantity Reconciliation: Automatic calculation of mass balances (Received vs Consumed in Batches, Produced vs Shipped).
+- Certainty System: Classifies all links as CONFIRMED (supported by approved records), POSSIBLE (pending QA review or unverified matching rule), or UNKNOWN.
+- Open-Weight AI Architecture: Utilizes Qwen3-4B via local Ollama or hosted inference with strict server-side tool calling and schema validation.
+- Zero Hallucination Guarantee: Relational database is the source of truth; AI model has no direct write access to business relationships.
+- Human-in-the-Loop: All consequential actions (quarantines, recalls, external customer notices) require explicit human sign-off recorded in immutable audit logs.
+
+## Domain Entities
+- Organizations & Tenants (Meadow Pantry Products Inc.)
+- Suppliers (Greenfield Ingredients, Sunrise Apiaries, Andean Cacao Traders)
+- Ingredient Lots (L-204, L-205, L-206, L-207)
+- Production Batches (PB-031, PB-032, PB-033)
+- Finished Product Lots (FP-101, FP-102, FP-103)
+- Customer Orders (ORD-101 through ORD-112)
+- Incident Reports (INC-2026-001)
+
+## Public Routes
+- / : Landing page and 3D TraceSphere visualization
+- /how-it-works : Technical architecture, deterministic graph traversal, and AI safety
+- /security : Row-level security, tenant isolation, and auditability
+- /app : Operations overview dashboard
+- /app/trace : 2D interactive operational traceability explorer
+- /app/documents : Document review inbox and extraction viewer
+- /app/agent : AI investigation workspace with tool call traces
+- /app/incidents : Incident report management and evidence export
+- /app/audit : Comprehensive immutable audit trail
+- /app/settings : Model endpoint and tenant settings
