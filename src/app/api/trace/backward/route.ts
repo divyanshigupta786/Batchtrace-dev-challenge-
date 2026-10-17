@@ -8,9 +8,10 @@ export async function GET(request: Request) {
     const entityId = searchParams.get('entityId') || 'FP-101';
 
     // If internal FastAPI service binding is configured, call it
-    if (process.env.FASTAPI_BACKEND_URL) {
+    const backendUrl = process.env.BACKEND_URL || process.env.FASTAPI_BACKEND_URL;
+    if (backendUrl) {
       try {
-        const targetUrl = new URL('/api/trace/backward', process.env.FASTAPI_BACKEND_URL);
+        const targetUrl = new URL('/api/trace/backward', backendUrl);
         const res = await fetch(targetUrl.toString(), {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },

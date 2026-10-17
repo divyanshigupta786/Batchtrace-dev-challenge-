@@ -22,9 +22,10 @@ export async function POST(request: Request) {
     const uploader = uploaderName || 'Elena Rostova (QA Manager)';
 
     // Optional coordinate extraction via internal FastAPI service binding
-    if (process.env.FASTAPI_BACKEND_URL) {
+    const backendUrl = process.env.BACKEND_URL || process.env.FASTAPI_BACKEND_URL;
+    if (backendUrl) {
       try {
-        const targetUrl = new URL('/api/extract', process.env.FASTAPI_BACKEND_URL);
+        const targetUrl = new URL('/api/extract', backendUrl);
         const res = await fetch(targetUrl.toString(), {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },

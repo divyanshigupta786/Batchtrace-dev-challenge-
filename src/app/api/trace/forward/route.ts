@@ -8,9 +8,10 @@ export async function GET(request: Request) {
     const lotId = searchParams.get('lotId') || 'L-204';
 
     // If internal FastAPI service binding is configured, call it
-    if (process.env.FASTAPI_BACKEND_URL) {
+    const backendUrl = process.env.BACKEND_URL || process.env.FASTAPI_BACKEND_URL;
+    if (backendUrl) {
       try {
-        const targetUrl = new URL('/api/trace/forward', process.env.FASTAPI_BACKEND_URL);
+        const targetUrl = new URL('/api/trace/forward', backendUrl);
         const res = await fetch(targetUrl.toString(), {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
