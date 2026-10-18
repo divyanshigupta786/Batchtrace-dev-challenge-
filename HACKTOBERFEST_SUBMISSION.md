@@ -6,6 +6,8 @@
 
 # BatchTrace Agent — AI-Powered Food Traceability & Incident Intelligence Platform
 
+![BatchTrace Agent — From Ingredient to Consumer Full Traceability](https://raw.githubusercontent.com/divyanshigupta786/Batchtrace-dev-challenge-/main/public/cover-image.jpg)
+
 > **"Every batch has a story. Find it instantly."**
 
 ---

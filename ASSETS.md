@@ -33,3 +33,8 @@
 
 ## Iconography
 - **Lucide React** (ISC License) — Accessible, clean SVG iconography used across the dashboard, graph explorer, and incident dossiers.
+
+---
+
+## Visual Media & Promotional Assets
+- **Platform Cover & Hero Infographic**: `public/cover-image.jpg` — Platform architecture and workflow infographic illustrating the end-to-end journey from raw ingredients (`L-204`, `L-206`, `L-207`) through production batches (`PB-031`, `PB-032`), finished lots (`FP-101`, `FP-102`), and customer dispatches (`ORD-101`–`ORD-105`), alongside the Meadow Pantry product line and real-time open-source AI agent.

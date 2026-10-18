@@ -6,6 +6,10 @@
 
 ---
 
+![BatchTrace Agent — From Ingredient to Consumer Full Traceability](https://raw.githubusercontent.com/divyanshigupta786/Batchtrace-dev-challenge-/main/public/cover-image.jpg)
+
+---
+
 ## 1. System Overview & Problem Statement
 
 When an ingredient supplier issues an alert (e.g. *"Supplier lot L-204 has elevated DON mycotoxin levels"*), quality assurance and plant operations teams typically spend hours or days digging through disconnected spreadsheets, PDF invoices, paper traveler sheets, and carrier bills of lading to answer three critical questions:
